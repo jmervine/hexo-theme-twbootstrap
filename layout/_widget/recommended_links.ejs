@@ -1,0 +1,8 @@
+<h3><%= theme.recommended_links_title %></h3>
+<ul class="list-group">
+<% theme.recommended_links.forEach(function(item){ %>
+  <li class="list-group-item">
+    <a href="<%= item.url %>"><%= item.title %></a>
+  </li>
+<% }); %>
+</ul>

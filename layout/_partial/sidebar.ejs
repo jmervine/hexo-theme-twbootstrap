@@ -1,5 +1,7 @@
-<div class="well sidebar-nav">
+<div class="sidebar-nav">
 <% theme.widgets.forEach(function(widget){ %>
-  <%- partial('../_widget/' + widget) %>
+  <div class="widget">
+  	<%- partial('../_widget/' + widget) %>
+  </div>
 <% }); %>
 </div>

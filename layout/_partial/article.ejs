@@ -1,32 +1,50 @@
-<% if (item.layout != 'page'){ %>
-  <div class="page-header">
-  <div class="icon"></div>
-  <time datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><%= item.date.format(config.date_format) %></a></time>
-  <%- partial('post/title') %>
-  </div>
-<% } %>
-<p>
-<% if (item.excerpt && index){ %>
-  <%- item.excerpt %>
-<% } else { %>
-  <%- item.content %>
-<% } %>
-</p>
-<% if (index){ %>
-    <div class="row">
-  <% if (item.excerpt){ %>
-    <div class="col-3 col-md-3">
-      <a href="<%- config.root %><%- item.path %>#more" class="more-link"><%= theme.excerpt_link %></a>
+<article class="post">
+  <% if (item.layout != 'page'){ %>
+    <div class="post-date">
+      <time datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></time>
     </div>
+    <%- partial('post/title') %>
   <% } %>
-  <% if (item.comment && config.disqus_shortname){ %>
-    <div class="col-3 col-md-3">
-      <a href="<%- item.permalink %>#disqus_thread" class="comment-link">Comments</a>
-    </div>
-  <% } %>
+  <div class="post-content">
+    <% if (item.excerpt && index){ %>
+      <%- item.excerpt %>
+    <% } else { %>
+      <%- item.content %>
+    <% } %>
   </div>
-<% } else { %>
-  <%- partial('post/category') %>
-  <%- partial('post/tag') %>
-<% } %>
-<%- partial('comment') %>
+  <% if (index){ %>
+      <div class="row">
+    <% if (item.excerpt){ %>
+      <div class="col-3 col-md-3">
+        <a href="<%- config.root %><%- item.path %>#more" class="more-link"><%= __('read_more') %></a>
+      </div>
+    <% } %>
+    <% if (item.comment && config.disqus_shortname){ %>
+      <div class="col-3 col-md-3">
+        <a href="<%- item.permalink %>#disqus_thread" class="comment-link">Comments</a>
+      </div>
+    <% } %>
+    </div>
+  <% } else { %>
+    <%- partial('post/category') %>
+    <%- partial('post/tag') %>
+  <% } %>
+  <%- partial('post/addthis') %>
+  <% if (!index) { %>
+    <ul class="next_prev">
+      <% if (page.next) { %>
+        <li class="prev">
+        <a class="btn btn-success" role="button" href="<%-  config.root %><%- page.next.path %>">
+          <%= __('prev') %>
+        </a></li>
+      <% } %>
+      <% if (page.prev) { %>
+        <li class="next">
+        <a class="btn btn-success" role="button" href="<%- config.root %><%- page.prev.path %>">
+          <%= __('next') %>
+        </a></li>
+      <% } %>
+    </ul>
+  <% } %>
+  <%- partial('comment') %>
+</article>

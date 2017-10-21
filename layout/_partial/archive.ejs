@@ -18,7 +18,7 @@ if (page.archive){
   <%- partial('pagination') %>
 <% } else { %>
   <p>
-  <% page.each(function(item){ %>
+  <% page.posts.each(function(item){ %>
     <div class="icon"></div>
     <time datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><%= item.date.format(config.date_format) %></a></time>
     <% if (item.link){ %>
