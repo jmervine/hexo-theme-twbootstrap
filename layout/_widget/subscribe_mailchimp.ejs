@@ -1,0 +1,16 @@
+<h3>Neue Beiträge per Mail erhalten</h3>
+<div id="mc_embed_signup" class="sidebar">
+<form action="<%= theme.mailchimp.post_action %>" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+<div class="mc-field-group">
+  <label for="mce-EMAIL">Email Adresse</label>
+  <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+</div>
+  <div id="mce-responses" class="clear">
+    <div class="response" id="mce-error-response" style="display:none"></div>
+    <div class="response" id="mce-success-response" style="display:none"></div>
+  </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;">
+    <input type="text" name="<%= theme.mailchimp.field_name %>" value=""></div>
+  <div class="clear"><input type="submit" value="Abonnieren" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+</form>
+</div>

@@ -1,0 +1,247 @@
+body {
+    font-size: 18px;
+}
+
+.col-md-8 {
+    padding-left: 0;
+}
+
+article {
+    padding-left: 20px;
+}
+
+a {
+    font-weight: bold;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: bold;
+    margin-top: (@line-height-computed*2);
+    margin-bottom: .5rem;
+    line-height: 1.25;
+    text-rendering: optimizeLegibility;
+    color: #222;
+}
+
+p + h1, p + h2, p + h3, p + h4, p + h5, div + h1, div + h2, div + h3, div + h4, div + h5 {
+    margin-top: (@line-height-computed*2);
+}
+
+h1 {
+    font-size: 2em;
+    a {
+        font-weight: inherit;
+    }
+}
+
+h2 {
+    font-size: 1.6em;
+}
+
+h3 {
+    font-size: 19px;
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+h5 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.sidebar-nav {
+    label {
+        font-weight: normal;
+    }
+
+    input {
+        margin-bottom: 0.5em;
+    }
+    
+    .widget {
+        margin-bottom: 4em;
+    }
+
+    .carousel {
+        margin-bottom: 2em;
+        background-color: #f8f8f8;
+        border: solid 1px #eee;
+    }
+
+    @media (max-width: @screen-md) {
+        img {
+            max-width: 300px !important;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+        .item {
+            height: 130px !important;
+        }
+        .carousel-inner {
+            height: 15em !important;
+        }
+    }
+    .carousel-indicators {
+        bottom: 0 !important;
+    }
+
+    .carousel-inner {
+        height: 20em;
+    }
+
+    .carousel-control {
+        background: none !important;
+        position: absolute;
+        top: auto;
+        bottom: 35px;
+
+        &.right {
+            margin-right: 1em;
+        }
+    }
+
+    .carousel-caption {
+        margin-top: 1em;
+        position: static;
+        padding: 0.5em;
+    }
+}
+
+.navbar {
+    font-weight: 300;
+
+    .navbar-form {
+        font-weight: normal;
+        width: 180px;
+    }
+
+    .navbar-brand {
+        font-weight: normal;
+        font-size: 24px;
+        @media (min-width: 768px) {
+            font-size: 28px;
+        }
+    }
+
+    .nav {
+        @horizontal-padding: 15px;
+        a {
+            font-weight: normal;
+            text-transform: uppercase;
+            @media (min-width: 768px) {
+                padding-left: @horizontal-padding / 2;
+                padding-right: @horizontal-padding / 2;
+            }
+            @media (min-width: 992px) {
+                padding-left: @horizontal-padding;
+                padding-right: @horizontal-padding;
+            }
+        }
+
+        .rss, .github, .twitter {
+            font-size: 18px;
+            display: inline-block;
+            padding-left: 5px;
+            padding-right: 5px;
+
+            @media (min-width: 992px) {
+                padding-left: 6px;
+                padding-right: 6px;
+            }
+        }
+
+        .twitter:hover {
+            color: #00bef6;
+        }
+
+        .rss {
+            padding-left: 15px;
+            @media (min-width: 768px) {
+                padding-left: @horizontal-padding / 2;
+            }
+            @media (min-width: 992px) {
+                padding-left: @horizontal-padding;
+            }
+            &:hover {
+                color: #FF6600;
+            }
+        }
+
+        .github {
+            padding-right: 15px;
+            @media (min-width: 768px) {
+                padding-right: @horizontal-padding / 2;
+            }
+            @media (min-width: 992px) {
+                padding-right: @horizontal-padding;
+            }
+            &:hover {
+                color: #000;
+            }
+        }
+    }
+}
+
+.navbar-footer {
+    min-height: 30px;
+    margin-top: 40px;
+    margin-bottom: 0;
+    border-top: 1px solid @seperator-color;
+
+    .navbar-center {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-text {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: #aaa;
+    }
+}
+
+.googleplus-hidden {
+    position: absolute;
+    top: -1000em;
+    left: -1000em;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+.nav, .pagination, .carousel, .panel-title a {
+    cursor: pointer;
+}
+
+.header-if-wide {
+    display: inline !important;
+    @media (min-width: 768px) and (max-width: 991px) {
+        display: none !important;
+    }
+}
+
+.wide-only {
+    @media (max-width: 767px) {
+        display: none !important;
+    }
+}
+
+.narrow-only {
+    @media (min-width: 768px) {
+        display: none !important;
+    }
+}
+
+.rounded-corners (@radius: 5px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -ms-border-radius: @radius;
+    -o-border-radius: @radius;
+    border-radius: @radius;
+}

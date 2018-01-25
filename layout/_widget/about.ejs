@@ -1,0 +1,29 @@
+<h3><%= theme.about.title %></h3>
+<div id="carousel-about" class="carousel slide" data-ride="carousel" data-interval="99999">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <% theme.about.content.forEach(function(el, i){ %>
+    <li data-target="#carousel-about" data-slide-to="<%= i %>" <% if (i == 0) { %>class="active" <% } %>></li>
+    <% }); %>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <% theme.about.content.forEach(function(content, index){ %>
+      <div class="item <% if (index == 0) { %>active <% } %>">
+        <img src="<%= content.image %>" alt="<%= content.image_alt %>">
+        <div class="carousel-caption">
+          <p><%- content.description %></p>
+        </div>
+      </div>
+    <% }); %>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-about" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-about" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
