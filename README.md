@@ -7,8 +7,7 @@ See [This example site](http://hexo-example.s3-website.eu-central-1.amazonaws.co
 ```
 npm install hexo-renderer-less --save
 cd themes
-git clone https://github.com/philippkeller/hexo-theme
--twbootstrap.git
+git clone https://github.com/philippkeller/hexo-theme-twbootstrap.git
 ```
 
 Then `theme: hexo-theme-twboostrap` into your `_config.yml`
