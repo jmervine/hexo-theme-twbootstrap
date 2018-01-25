@@ -1,6 +1,6 @@
 # Hexo theme based on twitter bootstrap
 
-See [This example site](http://hexo-example.s3-website.eu-central-1.amazonaws.com/) for a demo.
+See [this example site](http://hexo-example.s3-website.eu-central-1.amazonaws.com/) for a demo.
 
 # Installation
 
