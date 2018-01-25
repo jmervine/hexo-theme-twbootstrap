@@ -33,7 +33,7 @@ highlightjs: atelier-estuary-light
 
 Then do
 
-```
+```bash
 hexo clean
 hexo generate
 ```
