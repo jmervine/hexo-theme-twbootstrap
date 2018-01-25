@@ -1,7 +1,8 @@
 <div class="sidebar-nav">
-<% theme.widgets.forEach(function(widget){ %>
-  <div class="widget">
+<% if (theme.widgets) { 
+  theme.widgets.forEach(function(widget){ %>
+    <div class="widget">
   	<%- partial('../_widget/' + widget) %>
-  </div>
-<% }); %>
+    </div>
+<% })}; %>
 </div>
