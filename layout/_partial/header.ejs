@@ -1,4 +1,8 @@
-<div class="navbar navbar-fixed-top <% if (theme.bs_nav_inverse) { %>navbar-inverse <%}%>" role="navigation">
+<% if (theme.google_plus_id) { %>
+  <a href="https://plus.google.com/<%= theme.google_plus_id %>?rel=author" class="google googleplus-hidden" title="Google+">Google+</a>
+<% } %>
+
+<div class="navbar navbar-default navbar-static-top">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -6,15 +10,9 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <% if (theme.gravatar) { %>
-      <span class="brand">
-        <a class="navbar-brand" href="<%- config.root %>"><img id="gravatar_nav" src="http://www.gravatar.com/avatar/<%-theme.gravatar%>.jpg?s=50"/><%- config.title %></a>
-      </span>
-      <% } else { %>
-      <a class="navbar-brand" href="<%- config.root %>"><%- config.title %></a>
-      <% } %>
+      <a class="navbar-brand" href="<%- config.root %>"><span class="text-primary"><%- config.title %></span></a>
     </div>
-    <div class="collapse navbar-collapse">
+    <div class="collapse navbar-collapse navbar-right">
       <ul class="nav navbar-nav">
         <% for (var i in theme.menu){ %>
           <li><a href="<%- theme.menu[i] %>"><%- i %></a></li>

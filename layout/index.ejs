@@ -1,4 +1,21 @@
-<% page.posts.each(function(item){ %>
-  <%- partial('_partial/article', {item: item, index: true}) %>
-<% }); %>
-<%- partial('_partial/pagination') %>
+<%- partial('_partial/header') %>
+<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-11 col-md-11">
+						<% page.posts.each(function(item){ %>
+						<%- partial('_partial/article', {item: item, index: true}) %>
+						<% }); %>
+						<%- partial('_partial/pagination') %>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-offset-1 col-md-3"><%- partial('_partial/sidebar') %></div>
+	</div>
+</div>
+<div id="push"></div>
+<%- partial('_partial/footer') %>
+<%- partial('_partial/after_footer') %>

@@ -1,9 +1,14 @@
-<form action="//google.com/search" method="get" accept-charset="utf-8">
+  <form action=""
+    method="get"
+    data-action="https://google.com.br/search?q=site:<%- config.url.replace( /^https?:\/\//, '' ) %>"
+    accept-charset="utf-8"
+    data-js="google-search-form">
   <div class="input-group">
-    <input class="form-control" id="searchbox" type="search" name="q" results="0" placeholder="<%= __('search') %>">
+    <input class="form-control" type="search" name="q" results="0" placeholder="<%= __('search') %>" data-js="google-search-input" style="padding-left: 0; padding-right: 0">
     <span class="input-group-btn">
-      <button class="btn btn-default" type="submit">Go!</button>
+      <button class="btn btn-default" type="submit">
+        <span class="glyphicon glyphicon-search"></span> 
+      </button>
     </span>
-    <input type="hidden" name="q" value="site:<%- config.url.replace(/^https?:\/\//, '') %>">
   </div>
 </form>
