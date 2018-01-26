@@ -52,6 +52,29 @@ menu:
   Archives: /archives
 ```
 
+## About me carousel
+
+Add `about` in widgets:
+
+```yaml
+widgets:
+ - about
+```
+
+And add some text about yourself:
+
+```yaml
+about:
+  title: About John Doe
+  content:
+  - image: /images/john.jpg
+    image_alt: John
+    description: I'm a <a href="https://www.python.org/">python</a> developer
+  - image: /images/rust.jpg
+    image_alt: Rust
+    description: Recently I started learning rust.
+```
+
 ## Features of this theme
 
 - optimized for readability (~70 characters per line, enough margin between body and sidebar)
