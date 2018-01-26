@@ -3,8 +3,8 @@ search: Search in posts
 tags: Tags
 tagcloud: Tag-Cloud
 tweets: Tweets
-prev: Previous post
-next: Next post
+prev: Previous
+next: Next
 comment: Comments
 archive_a: Archive
 archive_b: "Archive: %s"
