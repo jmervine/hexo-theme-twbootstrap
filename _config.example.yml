@@ -1,21 +1,15 @@
-# Site default meta keywords
-#keywords: site, wide, default, keywords
-
 menu:
   Home: /
   Archives: /archives
 
-highlight:
-  enable: false
-
 widgets:
-- search
-# - category
-# - tagcloud
-# - tag
-# - about
-# - subscribe_mailchimp
-# - noteworthy
+- search # shows a search bar which uses google to search on your site
+- category
+- tagcloud # needs tag_minimum setting below
+- about # needs about: section below
+- noteworthy # needs noteworthy section below
+- recommended_links # needs recommended section below
+- subscribe_mailchimp # needs mailchimp section below
 
 # For use with tagcloud or tag widgets
 # - only tags >= to tag_minium are shown
@@ -66,11 +60,12 @@ facebook_id:
 linkedin_id:
 github_id:
 google_plus_id: 
-
 disqus_shortname: 
 
-highlightjs: solarized-light
+highlight:
+  enable: false
 
+highlightjs: atelier-estuary-light
 
 # highlight.js is the code highlighter in this theme
 # choose a highlight.js theme here or delete all to disable

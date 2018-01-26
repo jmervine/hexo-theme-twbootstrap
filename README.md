@@ -2,6 +2,10 @@
 
 See [this example site](http://hexo-example.s3-website.eu-central-1.amazonaws.com/) for a demo.
 
+- optimized for readability (~70 characters per line, enough margin between body and sidebar)
+- done for offline writing: (almost) all css and js files are part of the theme, the blog looks the same online as offline
+
+
 # Installation
 
 ```
@@ -52,7 +56,7 @@ menu:
   Archives: /archives
 ```
 
-## About me carousel
+## About me carousel (only visible on index)
 
 Add `about` in widgets:
 
@@ -75,10 +79,23 @@ about:
     description: Recently I started learning rust.
 ```
 
-## Features of this theme
+## Per-post CSS and Javascript
 
-- optimized for readability (~70 characters per line, enough margin between body and sidebar)
-- done for offline writing: all css and js files are part of the theme, the blog looks the same online as offline
+You can add custom CSS and load a special JS on a per-post basis. Example:
+
+```yaml
+---
+title: My awesome post
+date: 2014-01-20 16:06:00
+css:
+  - "pre>code.hljs {font-size: 80%}"
+scripts:
+  - https://example.com/script.js
+---
+```
+
+## Other features of this theme
+
 - ported from the [docpad theme of Erv Walter](https://github.com/ervwalter/ewalnet-docpad)
 - based on twitter bootstrap using LESS and variables.css ⇒ colors should be very easy to customize
 - highlightjs support

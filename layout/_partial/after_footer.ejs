@@ -1,7 +1,7 @@
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-wip/js/bootstrap.min.js"></script>
+<script src="<%- config.root %>js/bootstrap.min.js"></script>
 <%- partial('google_analytics') %>
-<% if (theme.imagesloaded_js) { %>
-<script src="//cdn.jsdelivr.net/imagesloaded/3.0.4/imagesloaded.pkgd.js"></script>
+<% if (config.imagesloaded_js) { %>
+<script src="<%- config.root %>js/imagesloaded.pkgd.js"></script>
 <% } %>
 <% if (config.disqus_shortname){ %>
 <script type="text/javascript">
