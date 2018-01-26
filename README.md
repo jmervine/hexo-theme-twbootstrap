@@ -3,8 +3,7 @@
 See [this example site](http://hexo-example.s3-website.eu-central-1.amazonaws.com/) for a demo.
 
 - optimized for readability (~70 characters per line, enough margin between body and sidebar)
-- done for offline writing: (almost) all css and js files are part of the theme, the blog looks the same online as offline
-
+- done for offline writing: (almost) all css and js files are part of the theme, the blog looks the same online as offline and loads also without internet connnection
 
 # Installation
 
@@ -94,38 +93,23 @@ scripts:
 ---
 ```
 
+## Captions on images
+
+If you add a image like this, it'll show the caption "Raspberry pi" right below the image:
+
+```html
+<img src="/images/pi.jpg" alt="Raspberry pi" class="caption" />
+```
+
 ## Other features of this theme
 
-- ported from the [docpad theme of Erv Walter](https://github.com/ervwalter/ewalnet-docpad)
-- based on twitter bootstrap using LESS and variables.css ⇒ colors should be very easy to customize
-- highlightjs support
-- addthis support
-- about me is a slick bootstrap carousel
-- custom javascripts per page (add them in YAML front matter with scripts: …)
-- captionjs: if you add `class="caption"` to an image then it gets an automated caption beneath
-
-### custom javascript per page
-
-If you need to include a custom javascript on one of your pages add this to front matter:
-
-```
-scripts:
-- /scripts/jquery.dataTables.min.js
-- /scripts/table_scroll.js
-```
-
-### install
-
-```
-npm install hexo-renderer-less --save
-git clone git@github.com/philippkeller/hexo-theme-ewal.git themes/ewal
-```
+There's support for disqus, addthis, subscripe to mailchimp mailing list, etc. Have a look at [the example config](_config.example.yml)
 
 ## Update
 
 Execute the following command to update:
 
 ```
-cd themes/ewal
+cd themes/hexo-theme-twbootstrap
 git pull
 ```
