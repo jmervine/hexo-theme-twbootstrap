@@ -67,6 +67,11 @@ highlight:
 
 highlightjs: atelier-estuary-light
 
+# shows a loading animation if image takes some moments to load
+# see https://imagesloaded.desandro.com/
+imagesloaded_js: true
+
+
 # highlight.js is the code highlighter in this theme
 # choose a highlight.js theme here or delete all to disable
 # - for demos see: http://softwaremaniacs.org/media/soft/highlight/test.html
