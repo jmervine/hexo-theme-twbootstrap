@@ -10,4 +10,6 @@ archive_a: Archive
 archive_b: "Archive: %s"
 page: "Page %d"
 recent_posts: Recent posts
-read_more: Read more »
+read_more: Read more »
+email_address: Email Addess
+subscribe: Subscribe
